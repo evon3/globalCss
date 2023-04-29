@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>template</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+</head>
+<body>
+	<div class="global-wrap" layout="LEFT">
+        <header class="global-header">
+            <div class="header-wrap">header</div>
+        </header>
+        <nav class="global-lnb">
+            <div class="lng-wrap">lnb</div>
+        </nav>
+        <main class="global-main">
+            <div>main</div>
+        </main>
+        <aside class="global-aside">
+            <div class="aside-wrap">aside</div>
+        </aside>
+        <footer class="global-footer">
+            <div class="footer-wrap">footer</div>
+        </footer>
+        
+    </div>
+
+    <script> 
+        // 1. HTML에서 각각의 li 요소를 선택
+        const tabHeaders = document.querySelectorAll('.m-tab-items li');
+        const tabContents = document.querySelectorAll('.m-tab-contents-list li');
+        
+        // 2. 각각의 li 요소에 클릭 이벤트를 추가
+        tabHeaders.forEach((tabHeader, index) => {
+          tabHeader.addEventListener('click', () => {
+            // 3. 클릭된 li 요소에 "on" 클래스를 추가하고, 이전에 "on" 클래스가 적용된 li 요소에서는 "on" 클래스를 제거
+            tabHeaders.forEach(header => header.classList.remove('active'));
+            tabHeader.classList.add('active');
+        
+            // 4. 클릭된 li 요소와 동일한 인덱스를 가진 li 요소의 "on" 클래스가 적용된 tab-content li 요소를 표시, 
+        //다른 li 요소에 해당하는 tab-content li 요소는 숨김
+            tabContents.forEach(content => content.classList.remove('active'));
+            tabContents[index].classList.add('active');
+          });
+        });
+    </script>
+</body>
+</html>

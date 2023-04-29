@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+html {
+   -webkit-tap-highlight-color: rgba(0, 0, 0, .1) !important;
+   -webkit-text-size-adjust: none;
+   -moz-text-size-adjust: none;
+   -ms-text-size-adjust: none;
+   font-size: 62.5%;
+   height: 100%;
+   overflow-y: auto;
+   -ms-overflow-style: scrollbar;
+}
+body {
+   font-family: 'Noto Sans KR', '돋움', Dotum, Baekmuk Dotum, Undotum, Apple Gothic, Latin font, sans-serif;
+   font: 13px 'Noto Sans KR' !important;
+   font-weight: normal;
+   line-height: 1.35;
+   font-size: 1.37em;
+   color: #333;
+   background-color: #f6f6f6;
+   word-wrap: break-word;
+   overflow-wrap: break-word;
+   font-size: 13px;
+}
+::-webkit-scrollbar {
+   width: 4x;
+   height: 4px;
+}
+::-webkit-scrollbar-thumb {;
+   width: 2px;
+   height: 2px;
+   background: #dadada;
+   border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+   background: #f4f4f4;
+   border-radius: 10px;
+}
+
+a, abbr, address, body, br, button, blockquote, cite, dd, del, div, dl, dt, em, form, html, h1, h2, h3, h4, h5, h6,
+i, iframe, img, ins, input, label, li, object, ol, option, p, pre, q, select,
+span, strong, table, tbody, td, textarea, tfoot, th, thead, time, ul,
+article, aside, details, figcaption, figure, footer, header, nav, section, fieldset, main {
+   margin: 0;padding: 0;border: none;outline: medium;vertical-align: baseline;-moz-box-sizing: border-box;box-sizing: border-box;
+   margin: 0;padding: 0;border: none;outline: none !important;vertical-align: baseline;
+   -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, nav, section, fieldset, main {display: block;}
+object {display: block; border: none;outline:  medium;font-size: 0;}
+table {border-collapse: collapse;border-spacing: 0;width: 100%;}
+th, td, tbody, thead, tfoot {border-collapse: collapse;}
+img {font-size: 0;vertical-align: top;width: 100%;height: auto;}
+caption, legend {display:none; width:0; height:0; line-height:0; font-size:0; overflow:hidden;}
+img, iframe, button {border: 0 none;outline: none;}
+iframe {overflow: auto;}
+input, select, textarea {font-size: inherit !important;font-family: 'Noto Sans KR' !important;color: inherit;outline: medium;line-height: inherit;}
+b, i, em {font-size: inherit;font-weight: inherit;font-style: inherit;}
+a {text-decoration: none;color: inherit;}
+button {cursor: pointer;background-color: transparent;font-size: inherit;font-family: inherit;overflow: visible;font-weight: inherit;}
+button:active > span, button:focus > span {position: relative;}
+
+/* method */
+table.layout-fixed {table-layout: fixed;}
+table.jqplot-table-legend,
+table.jqplot-cursor-legend {width: auto !important;border-spacing: 2px !important;border-collapse: separate !important;}
+
+/* component */
+input::-ms-clear {display: none;}
+select::-ms-expand {background-color: transparent;display: none;}
+textarea {width: 100%;height: 100%;min-height: 130px;overflow: auto;resize: none;}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {-webkit-appearance: none;margin: 0;}
+input, select, textarea {
+   /* -webkit-appearance: none;-moz-appearance: none;appearance: none; */
+   -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;
+}
+
+/* base */
+html,body{margin:0;padding:0;}
+body{min-width: 320px;font-family: 'Noto Sans KR', HelveticaNeue-Light, AppleSDGothicNeo-Light, "segoe ui", "malgun gothic", '맑은 고딕', "microsoft neogothic", arial, sans-serif !important;color:#000;-webkit-text-size-adjust:none}/* -webkit-text-size-adjust:none 웹표준 검사에 오류로 표시 */
+p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,form,fieldset{margin:0;padding:0}
+body,input,textarea,select,button,table{font-size: 13px;font-family: inherit;}
+table{empty-cells:show}
+caption,legend{display:none}
+a img,img{vertical-align:top;}
+img,fieldset{border:0}
+ul,dl,dd {list-style:none}
+ul li img {vertical-align:top}
+em,address{font-style:normal}
+a{text-decoration:none;color:inherit;}
+a:hover,a:active,a:visited,a:focus{color:inherit;}
+a:disabled{text-decoration: none;}
+
+
+/* form */
+input[type="button"],input[type="text"],button{-webkit-appearance:none}/* iOS 버튼 라운딩 제어 */
+input:disabled {opacity: 1;-webkit-text-fill-color: inherit;}/* iOS disabled 제어 *
